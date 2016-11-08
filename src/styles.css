@@ -1,5 +1,41 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	background-color:#6AE368;
+	font-family: Arial;
+}
+
+
 .consigna__container {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+
 }
+
+
+.consigna__container #bienvenido{
+	font-size:20px;
+	font-weight: bold;
+}
+.consigna__container #pageName{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.consigna__container p {
+	font-size:20px;
+}
+
+.searchbar{
+	width:85%;
+	height: 3%;
+}
+
+.mainHeader{
+	background: url("/logo.jpg") center no-repeat;
+	background-size: 10% 100%;	overflow: auto;
+	height: 100px;
+}
+
