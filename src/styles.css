@@ -35,7 +35,7 @@ body{
 
 .mainHeader{
 	background: url("/logo.jpg") center no-repeat;
-	background-size: 10% 100%;	overflow: auto;
+	background-size: 8% 80%;	overflow: auto;
 	height: 100px;
 }
 

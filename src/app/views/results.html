@@ -1,10 +1,19 @@
-<div class="consigna__container">
-  <h2>ACA TIENEN QUE CARGAR UNA GRILLA CON LOS ARTISTAS QUE APARECIERON COMO RESULTADO DE LA BUSQUEDA ANTERIOR</h2>
-  <img src="https://i.scdn.co/image/445ffa41207f321883fb01f406165801c7f41ef0" alt="">
-  <h4>Cyndi Lauper</h4>
-  <img src="https://i.scdn.co/image/6b86adfb6637e08f76390266b617120e95ad16c0" alt="">
-  <h4>Cindy Bradley</h4>
-  <img src="https://i.scdn.co/image/82633230315fb6b7cc7f4b573bc9e8edf0da69da" alt="">
-  <h4>Cindy Bullens</h4>
-  
-</div>
+	<div class="consigna__container">
+	  <div class="parteSuperior">
+	  <h2>Artists</h2>
+	  <p>You are currently searching for "{{artistName}}"</p>
+	  <input class="searchbar" type="text"  ng-model="artistName"/>
+	  <button ng-click="showResults()">Buscar</button>
+	  <p></p>
+	  <ul>
+	  	<li ng-repeat="artists">{{}} {{}}</li>
+	  </ul>
+	</div>
+	<div class="parteInferior">
+	  <img src="https://i.scdn.co/image/445ffa41207f321883fb01f406165801c7f41ef0" alt="">
+	  <h4>Cyndi Lauper</h4>
+	  <img src="https://i.scdn.co/image/6b86adfb6637e08f76390266b617120e95ad16c0" alt="">
+	  <h4>Cindy Bradley</h4>
+	  <img src="https://i.scdn.co/image/82633230315fb6b7cc7f4b573bc9e8edf0da69da" alt="">
+	  <h4>Cindy Bullens</h4>
+	</div>

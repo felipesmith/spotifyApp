@@ -1,25 +1,32 @@
 import 'angular-route';
 
-export function routes($routeProvider, $locationProvider) {
-    $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false,
-        rewriteLinks: true,
-    });
 
-    app.config(function($routeProvider) {
-    $routeProvider
-    .when("/", {
-        templateUrl : "index.html"
-    })
-    .when("/albums", {
-        templateUrl : "album-detail.html"
-    })
-    .when("/band/albums", {
-        templateUrl : "band-albums.html"
-    })
-    .when("/artists", {
-        templateUrl : "results.html"
-    });
+export function routes($routeProvider, $locationProvider) {
+   $locationProvider.html5Mode({
+       enabled: true,
+       requireBase: false,
+       rewriteLinks: true,
+   });
+
+   $routeProvider
+.when('/', {
+
+templateUrl : "app/views/index.html"
+})
+
+.when('/album-detail', {
+
+templateUrl : "app/views/album-detail.html"
+})
+
+.when('/band-albums', {
+
+templateUrl : "app/views/band-albums.html"
+})
+
+.when('/results', {
+
+templateUrl : "app/views/results.html"
 });
+
 }
