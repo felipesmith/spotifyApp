@@ -1,4 +1,4 @@
-<div class="consigna__container">
+<div class="consigna__container" >
 	<header class="mainHeader"></header>
 	  	<h2 id="bienvenido">Welcome to</h2>
 		<h1 id="pageName">Spotisearch</h1>
@@ -6,10 +6,10 @@
 		just enter an artist's name in the following
 		search box and enjoy!</p>
 
-	  <input class="searchbar" type="text"  ng-model="artistName"/>
-	  <button ng-click="showResults()">Buscar</button>
+	  <input class="searchbar" type="text"  ng-model="home_search"/>
+	  <button ng-click="searchArtist()">Buscar</button>
 	  <ul class="doble">
-	  	<li ng-repeat="favs">{{}}</li>
+	  	<li ng-repeat="fav in favs">{{}}</li>
 	  </ul>
 	  <h3>FAVORITOS</h3>
 	  <img src="https://i.scdn.co/image/66302ca80395b6be3600d5f0ef69db9e0c43f4f5" alt="">

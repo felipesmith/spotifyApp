@@ -1,8 +1,10 @@
 import {routes} from './routes';
 import {ApiService} from './services';
 import {Controller} from './controllers/indexCtrl'
+import {RController} from './controllers/resultCtrl'
 
 angular.module('App', ['ngRoute'])
     .config(routes)
-    .service('ApiService', ApiService)
- 	.controller('myCtrl',['$scope','$http' ,Controller]);
+    .service('ApiService',['$http', ApiService])
+    .controller('resultCtrl', RController)
+ 	.controller('indexCtrl', Controller);

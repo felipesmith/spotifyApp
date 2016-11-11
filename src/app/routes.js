@@ -10,8 +10,8 @@ export function routes($routeProvider, $locationProvider) {
 
    $routeProvider
 .when('/', {
-
-templateUrl : "app/views/index.html"
+	templateUrl : "app/views/index.html",
+	controller: "indexCtrl"
 })
 
 .when('/album-detail', {
@@ -25,8 +25,8 @@ templateUrl : "app/views/band-albums.html"
 })
 
 .when('/results', {
-
-templateUrl : "app/views/results.html"
+	templateUrl : "app/views/results.html",
+	controller: "resultCtrl"
 });
 
 }
