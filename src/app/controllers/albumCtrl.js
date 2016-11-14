@@ -1,4 +1,4 @@
-export function RController($scope,$http, $routeParams, ApiService){
+export function albumController($scope,$http, ApiService){
 	
 	$scope.searched = ApiService.search;
 	ApiService.searchService($scope.searched)
@@ -8,9 +8,8 @@ export function RController($scope,$http, $routeParams, ApiService){
 		});
 
 	$scope.searchAlbums = function(){
-			ApiService.searchAlbumsService($routeParams.bandId).then(function(response){
+			ApiService.searchAlbumsService($scope.artist).then(function(){
 				$scope.albums=response.data.items;
-				console.log(response);
 			});
 			
 	}

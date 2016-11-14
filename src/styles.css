@@ -67,6 +67,7 @@ img:before {
 
 ul {
 	width:100%;
+	list-style: none;
 }
 
 /*ul li {

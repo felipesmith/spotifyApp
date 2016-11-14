@@ -1,9 +1,8 @@
-export function Controller($scope, $rootScope ,$http, $location, ApiService){
+export function Controller($scope,$http, $location, ApiService){
 
 	$scope.searchArtist = function(){
-			$rootScope.name = $scope.home_search;
 			$location.path("/results");
-
+			ApiService.search = $scope.home_search;
 	}
 
 

@@ -1,25 +1,20 @@
 	<div class="consigna__container">
+	<header class="mainHeader"></header>
 	  <div class="parteSuperior">
 	  <h2>Artists</h2>
 	  <p>You are currently searching for "{{searched}}"</p>
 	  <input class="searchbar" type="text"  ng-model="artistName"/>
 	  <button ng-click="showResults()">Buscar</button>
-	  <p>Home  >  Artists</p>
+	  <p> Home >  Artists</p>
 
 	</div>
 	<div class="parteInferior">
 		<ul >
 		  	<li class="doble" ng-repeat="artist in artists">
-		  		<img src={{artist.images[0].url}}  alt="">
+		  		<a href="/band-albums/{{artist.id}}"><img src={{artist.images[0].url}}  alt=""></a>
 		  		<b>{{artist.name}}</b>
 		  	    <!-- <a href="https://api.spotify.com/v1/artists/{{artist.id}}/albums" ng-click="searchAlbums()"></a> -->
 		  		
 		  	</li>
 	  	</ul>
-	  <!-- <img src="https://i.scdn.co/image/445ffa41207f321883fb01f406165801c7f41ef0" alt="">
-	  <h4>Cyndi Lauper</h4>
-	  <img src="https://i.scdn.co/image/6b86adfb6637e08f76390266b617120e95ad16c0" alt="">
-	  <h4>Cindy Bradley</h4>
-	  <img src="https://i.scdn.co/image/82633230315fb6b7cc7f4b573bc9e8edf0da69da" alt="">
-	  <h4>Cindy Bullens</h4> -->
 	</div>
