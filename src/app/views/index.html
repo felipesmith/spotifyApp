@@ -1,12 +1,13 @@
 <div class="consigna__container" >
 	<header class="mainHeader"></header>
+	<div class="contentContainer">
 	  	<h2 id="bienvenido">Welcome to</h2>
 		<h1 id="pageName">Spotisearch</h1>
 		<p>Search your favourite songs over Spotify, 
 		just enter an artist's name in the following
 		search box and enjoy!</p>
 
-	  <input class="searchbar" type="text"  ng-model="home_search"/>
+	  <input class="searchbar" type="text"  placeholder="Search artist" ng-model="home_search"/>
 	  <button ng-click="searchArtist()">Buscar</button>
 	  <ul>
 	  	<li class="doble" ng-repeat="fav in favs">{{}}</li>
@@ -15,4 +16,5 @@
 	  <img src="https://i.scdn.co/image/66302ca80395b6be3600d5f0ef69db9e0c43f4f5" alt="">
 	  <img src="https://i.scdn.co/image/e2b11f82ba8d5aecc6486fe28225db43a003caa1" alt="">
 	  <img src="https://i.scdn.co/image/3a299e917835b053f53441280262f10829bd1c8e" alt="">
+	  </div>
 	</div>

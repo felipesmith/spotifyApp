@@ -1,18 +1,19 @@
 export function albumController($scope,$http, ApiService){
-	
-	$scope.searched = ApiService.search;
-	ApiService.searchService($scope.searched)
+	$scope.bandId = ApiService.getBandId();
+	console.log($scope.bandId);
+
+	ApiService.searchAlbumsService($scope.bandId)
 		.then(function(response){
-			$scope.artists = response;
-			console.log(response);
+			console.log(response);	
+			$scope.albums = response;
 		});
 
-	$scope.searchAlbums = function(){
-			ApiService.searchAlbumsService($scope.artist).then(function(){
-				$scope.albums=response.data.items;
-			});
+	// $scope.searchAlbums = function(){
+	// 		ApiService.searchAlbumsService($scope.toSearch.id).then(function(){
+	// 			$scope.albums=response.data.items;
+	// 		});
 			
-	}
+	// }
 
 
 

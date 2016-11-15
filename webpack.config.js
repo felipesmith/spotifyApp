@@ -20,7 +20,7 @@ module.exports = {
         port: 3000,
         open: true,
         watch: true,
-        publicPath: "/",
+        publicPath: "http://localhost:3000/",
         historyApiFallback: true,
         stats: {
             colors: true,

@@ -1,10 +1,11 @@
 <div class="band-detail-container">
-   <ul >
-		  	<li class="doble" ng-repeat="album in albums">
-		  		<a href="/band-albums/{{album.id}}"><img src={{album.images[0].url}}  alt=""></a>
-		  		<b>{{album.name}}</b>
-		  	    <!-- <a href="https://api.spotify.com/v1/artists/{{artist.id}}/albums" ng-click="searchAlbums()"></a> -->
-		  		
-		  	</li>
-	  	</ul>
+	<header class="albumHeader"><input class="headerSearchbar" placeholder="Search for a new artist" type="text" ></header>
+	<div class="contentContainer">
+		<ul>
+			<li class="doble" ng-repeat="album in albums">
+				<a href="/band-albums/{{album.id}}" ><img src={{album.images[0].url}}  alt=""></a>
+				<b>{{album.name}}</b>		  	 		  		
+			</li>
+		</ul>	
+	</div>
 </div>

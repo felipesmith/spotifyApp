@@ -1,18 +1,22 @@
 *{
 	box-sizing: border-box;
+	margin:1px;
 }
 body{
 	background-color:#6AE368;
 	font-family: Arial;
 }
 
+header{
+	border:2px solid black;
+}
 
-.consigna__container {
+/*.consigna__container {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
 
-}
+}*/
 
 .consigna__container #bienvenido{
 	font-size:20px;
@@ -35,8 +39,9 @@ body{
 
 .mainHeader{
 	background: url("/logo.jpg") center no-repeat;
-	background-size: 8% 80%;	overflow: auto;
+	background-size: 5% 50%;	overflow: auto;
 	height: 100px;
+
 }
 
 button{
@@ -77,9 +82,37 @@ ul {
 }*/
 
 .doble{
-	float:left;
+	display:inline-block;
 	width: 49%;
 	border:1% solid black;
 	padding: 1%;
 }
 
+/*=========================TERMINA RESULT======================*/
+
+/*=========================EMPIEZA ALBUMS======================*/
+
+.albumHeader{
+	background: url("/logo.jpg") top left no-repeat;
+	background-size: 5% 50%;	overflow: auto;
+	height: 100px;
+}
+
+.headerSearchbar{
+	float: right;
+	width:40%;
+	height: 20%;
+	border-radius: 500px;
+}
+
+.contentContainer{
+	width: 50%;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+.band-detail-container{
+	border:2px solid black;
+}
+
+/*=========================TERMINA ALBUMS======================*/

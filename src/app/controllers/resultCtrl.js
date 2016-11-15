@@ -1,19 +1,27 @@
-export function RController($scope,$http, $routeParams, ApiService){
+export function RController($scope,$http, $routeParams, $location, ApiService){
 	
 	$scope.searched = ApiService.search;
-	ApiService.searchService($scope.searched)
-		.then(function(response){
-			$scope.artists = response;
-			console.log(response);
-		});
+	$scope.artists;
 
-	$scope.searchAlbums = function(){
-			ApiService.searchAlbumsService($routeParams.bandId).then(function(response){
-				$scope.albums=response.data.items;
-				console.log(response);
-			});
-			
+	
+	ApiService.searchService($scope.searched)
+		.then((response)=>{
+			$scope.artists = response;
+	});
+	
+	$scope.showAlbums = (id)=>{
+		ApiService.bandId = id;
+		$location.path('/band-albums');
 	}
+
+	// $scope.searchAlbums = function(){
+	// 		ApiService.searchAlbumsService($routeParams.bandId).then(function(response){
+	// 			$scope.album=response.data.items;
+	// 			ApiService.artist = 
+	// 			console.log(response);
+	// 		});
+			
+	// }
 
 
 
