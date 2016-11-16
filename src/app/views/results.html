@@ -4,18 +4,21 @@
 	  <div class="parteSuperior">
 		  <h2>Artists</h2>
 		  <p>You are currently searching for "{{searched}}"</p>
-		  <input class="searchbar" placeholder="Search artist" type="text"/>
-		  <button ng-click="searchAlbums()">Buscar</button>
+		   <input class="searchbar" type="text"  placeholder="Search artist" ng-model="home_search"/>
+	 	  <button class="boton" ng-click="searchArtist()">Buscar</button>
 		  <p> Home >  Artists</p>
 	  </div>
 	  <div class="parteInferior">
 		<ul>
 		  	<li class="doble" ng-repeat="artist in artists">
 		  		<!-- <a href="/band-albums/{{artist.id}}"><img src={{artist.images[0].url}}  alt=""></a> -->
-		  		<img src={{artist.images[0].url}} ng-click="showAlbums(artist.id)">
+		  		<div class="caja_li">
+
+		  		<img ng-if="artist.images.length>0" src={{artist.images[0].url}} ng-click="showAlbums(artist.id)">
+		  		<img ng-if="artist.images.length==0" src=default.jpg ng-click="showAlbums(artist.id)">
 		  		<b>{{artist.name}}</b>
 		  	    <!-- <a href="https://api.spotify.com/v1/artists/{{artist.id}}/albums" ng-click="searchAlbums()"></a> -->
-		  		
+		  		</div>
 		  	</li>
 	  	</ul>
 	 </div>

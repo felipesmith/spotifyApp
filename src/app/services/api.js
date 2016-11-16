@@ -2,6 +2,11 @@ export function ApiService($http) {
 	this.artist;
 	this.bandId;
 	this.search;
+	this.albumId;
+
+	this.getAlbumId =()=>{
+		return this.albumId;
+	}
 
 	this.getArtists = ()=>{
 		return this.artist;
@@ -9,6 +14,21 @@ export function ApiService($http) {
 
 	this.getBandId= ()=>{
 		return this.bandId;
+	}
+
+	this.searchSongsService = (id)=>{
+		return $http({
+			method: 'GET',
+			url: "https://api.spotify.com/v1/albums/"+id+"/tracks"
+		}).then((response)=>{
+			var dataParsed = [];
+			response.data.items.forEach(function(el, index, arr){
+					dataParsed.push(el);
+			});
+			return dataParsed;
+		},()=>{
+			console.log('La llamada falló3');
+		})
 	}
 
 	this.searchAlbumsService = (id)=>{

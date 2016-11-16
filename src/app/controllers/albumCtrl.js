@@ -8,6 +8,9 @@ export function albumController($scope,$http, ApiService){
 			$scope.albums = response;
 		});
 
+
+
+
 	// $scope.searchAlbums = function(){
 	// 		ApiService.searchAlbumsService($scope.toSearch.id).then(function(){
 	// 			$scope.albums=response.data.items;
