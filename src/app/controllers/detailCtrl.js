@@ -1,16 +1,24 @@
 export function DController($scope,$http, $routeParams, $location, ApiService){
 	
-	$scope.albumId = ApiService.getAlbumId();
+	$scope.albumId = $routeParams.albumId;
 	console.log($scope.albumId);
 
-	ApiService.searchSongsService($scope.albumId)
+	ApiService.searchSongsService($routeParams.albumId)
 		.then(function(response){
 			console.log(response);	
 			$scope.tracks = response;
 		});
 
+	ApiService.searchAlbumById($routeParams.albumId)
+		.then(function(response){
+			console.log(response);
+			$scope.album=response;
+		});	
+
+
+
 	$scope.searchArtist = function(){
-		
+		$location.path=('/results/'+$scope.home_search);
 		ApiService.searchService($scope.home_search)
 		.then((response)=>{
 			$scope.artists = response;

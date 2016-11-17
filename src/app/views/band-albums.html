@@ -2,6 +2,10 @@
 	<header class="albumHeader"><input class="headerSearchbar" placeholder="Search for a new artist" type="text" >
 	<button class="boton" ng-click="searchArtist()">Buscar</button></header>
 	<div class="contentContainer">
+	<div class="parteSuperior">
+		<img ng-src="{{artist.images[0].url}}">
+		<b>{{artist.name}}</b>
+	</div>
 		<ul>
 			<li class="doble" ng-repeat="album in albums">
 				<div class="caja_li">

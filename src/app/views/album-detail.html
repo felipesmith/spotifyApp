@@ -1,8 +1,10 @@
 <div>
-    <h2>EN ESTA SECCION TIENE QUE APARECER LA TAPA DEL DISCO SELECCIONADO JUNTO CON LA LISTA DE TEMAS QUE TIENE EL DISCO.</h2>
+    <header class="albumHeader"><input class="headerSearchbar" placeholder="Search for a new artist" type="text" >
+    <button class="boton" ng-click="searchArtist()">Buscar</button></header>
     <div class="contentContainer">
     <div class="parteSuperior">
         <img src={{album.images[0].url}}  alt="">
+        <b>{{album.name}}</b>
     </div>
         <ul>
             <li class="simple" ng-repeat="track in tracks">

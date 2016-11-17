@@ -48,6 +48,18 @@ export function ApiService($http) {
 		})
 	}
 
+	this.searchAlbumById=(id)=>{
+		return $http({
+			method: 'GET',
+			url:"https://api.spotify.com/v1/albums/"+id
+		}).then((response)=>{
+			return response.data;
+		},()=>{
+			console.log("La llamada fallo 5");
+		})
+	}
+
+
     this.searchService = (name)=>{
 		return $http({
 			method: 'GET',
@@ -59,5 +71,15 @@ export function ApiService($http) {
 		})
 	}
 
+	this.searchServiceByID=(id)=>{
+		return $http({
+			method:'GET',
+			url:"https://api.spotify.com/v1/artists/"+id
+		}).then((response)=>{
+			return response.data;
+		},()=>{
+			console.log('La llamada falló 4');
+		})
+	}
 
 }
