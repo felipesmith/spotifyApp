@@ -16,7 +16,8 @@ export function routes($routeProvider, $locationProvider) {
 
 .when('/album-detail', {
 
-templateUrl : "app/views/album-detail.html"
+templateUrl : "app/views/album-detail.html",
+controller:"detailCtrl"
 })
 
 .when('/band-albums', {

@@ -1,4 +1,4 @@
-export function albumController($scope,$http, ApiService){
+export function albumController($scope,$http,$location, ApiService){
 	$scope.bandId = ApiService.getBandId();
 	console.log($scope.bandId);
 
@@ -8,17 +8,16 @@ export function albumController($scope,$http, ApiService){
 			$scope.albums = response;
 		});
 
+	$scope.showTracks = (id)=>{
+		ApiService.albumId = id;
+		$location.path('/album-detail');
+	}
 
-
-
-	// $scope.searchAlbums = function(){
-	// 		ApiService.searchAlbumsService($scope.toSearch.id).then(function(){
-	// 			$scope.albums=response.data.items;
-	// 		});
-			
-	// }
-
-
-
-
+	$scope.searchArtist = function(){
+		
+		ApiService.searchService($scope.home_search)
+		.then((response)=>{
+			$scope.artists = response;
+	});
+	}
 }

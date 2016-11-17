@@ -3,17 +3,10 @@ export function DController($scope,$http, $routeParams, $location, ApiService){
 	$scope.albumId = ApiService.getAlbumId();
 	console.log($scope.albumId);
 
-
-	$scope.showTracks = (id)=>{
-		ApiService.albumId = id;
-		$location.path('/album-detail');
-	}
-
-
 	ApiService.searchSongsService($scope.albumId)
 		.then(function(response){
 			console.log(response);	
-			$scope. = response;
+			$scope.tracks = response;
 		});
 
 	$scope.searchArtist = function(){
