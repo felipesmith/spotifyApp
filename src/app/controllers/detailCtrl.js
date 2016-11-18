@@ -25,6 +25,14 @@ export function DController($scope,$http, $routeParams, $location, ApiService){
 	});
 	}
 
+	$scope.seeFavs = function(id){
+		return ApiService.isFav(id);
+	}
+
+	$scope.starColor=function(item){
+		return ApiService.changeStar(item);
+	}
+
 
 	
 	// $scope.searchAlbums = function(){

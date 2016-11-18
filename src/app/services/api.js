@@ -1,4 +1,4 @@
-export function ApiService($http) {
+export function ApiService($http, $localStorage) {
 	this.artist;
 	this.bandId;
 	this.search;
@@ -80,6 +80,28 @@ export function ApiService($http) {
 		},()=>{
 			console.log('La llamada falló 4');
 		})
+	}
+	
+	this.changeStar=(item)=>{
+		var flag=false;
+		for (var i = $localStorage.favs.length - 1; i >= 0; i--) {
+			if($localStorage.favs[i].id == item.id){
+				flag=true;
+				$localStorage.favs.splice(i,1);
+			}
+		}
+		if(flag==false){
+			$localStorage.favs.push(item);
+		}
+	}
+
+	this.isFav=(id)=>{
+		for(var i=$localStorage.favs.length -1; i>=0;i--){
+			if($localStorage.favs[i].id== id){
+				return true;
+			}	
+		}
+		return false;
 	}
 
 }

@@ -9,7 +9,9 @@
         <ul>
             <li class="simple" ng-repeat="track in tracks">
                 <div class="caja_li">
-                <b>{{track.name}}</b>   
+                <b>{{track.name}}</b>
+                <i ng-class="{'fa fa-star-o':!seeFavs(track.id) , 'fa fa-star':seeFavs(track.id)}" aria-hidden="true" ng-click="starColor(track)"></i>
+ 
                 </div>                      
             </li>
         </ul>

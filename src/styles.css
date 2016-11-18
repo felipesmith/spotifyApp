@@ -8,7 +8,7 @@ body{
 }
 
 header{
-	border:2px solid black;
+	border-bottom:2px solid black;
 }
 h2{
 	padding:2%;
@@ -17,7 +17,7 @@ p{
 	padding: 2%;
 } 
 footer{
-	border:2px solid black;
+	border-top:2px solid black;
 	height: 100px;
 }
 
@@ -28,6 +28,9 @@ footer{
   margin-right: auto;
 
 }*/
+.consigna__container{
+	border:2px solid black;
+}
 
 .consigna__container #bienvenido{
 	font-size:20px;
@@ -63,6 +66,7 @@ footer{
 	background-size: 85px 85px;
 	overflow: auto;
 	height: 100px;
+	width: 100%;
 
 }
 
@@ -89,15 +93,10 @@ img{
 	 min-height: 100px;
     min-width: 100px;
 	display:inline-block;
+	cursor:pointer;
 }
-/*img:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    min-height: 100px;
-    min-width: 100px;
-  
-}*/
+
+
 
 ul {
 	width:100%;
@@ -105,20 +104,28 @@ ul {
 	padding: 0px;
 }
 
+li{
+	min-width: 185px;
+}
+
 .doble {
 	width:49%;
 	display:inline-block;
+	
+
 }
 
 .simple {
 	width: 100%;
 	display:inline-block;
+
 }
 
 .caja_li{
 	border:2%;
 	display:flex;
-	flex-direction: row;
+
+	/*flex-direction: row;*/
 }
 
 b{
