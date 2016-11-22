@@ -20,10 +20,14 @@ export function albumController($scope,$http,$location,$routeParams, ApiService)
 	}
 
 	$scope.searchArtist = function(){
-		$location.path=('/results/'+$scope.home_search);
+		$location.path('/results/'+$scope.home_search);
 		ApiService.searchService($scope.home_search)
 		.then((response)=>{
 			$scope.artists = response;
 	});
 	}
+	$scope.home=function(){
+		$location.path('/');
+	}
+
 }

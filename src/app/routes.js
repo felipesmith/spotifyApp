@@ -1,12 +1,18 @@
 import 'angular-route';
 
 
-export function routes($routeProvider, $locationProvider) {
+export function routes($routeProvider, $locationProvider,$sceDelegateProvider) {
    $locationProvider.html5Mode({
        enabled: true,
        requireBase: false,
        rewriteLinks: true,
    });
+
+$sceDelegateProvider.resourceUrlWhitelist([
+'self',
+'https://p.scdn.co/mp3-preview/**'
+]);
+
 
    $routeProvider
 .when('/', {

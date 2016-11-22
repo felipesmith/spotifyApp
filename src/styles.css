@@ -28,9 +28,9 @@ footer{
   margin-right: auto;
 
 }*/
-.consigna__container{
+/*.consigna__container{
 	border:2px solid black;
-}
+}*/
 
 .consigna__container #bienvenido{
 	font-size:20px;
@@ -106,6 +106,7 @@ ul {
 
 li{
 	min-width: 185px;
+
 }
 
 .doble {
@@ -118,39 +119,58 @@ li{
 .simple {
 	width: 100%;
 	display:inline-block;
+	
 
 }
 
 .caja_li{
-	border:2%;
+	
 	display:flex;
+	/*border-top:1px solid black;*/
+	border-bottom: 1px solid black;
+	line-height: 2;
+	justify-content: space-between;
 
 	/*flex-direction: row;*/
 }
 
 b{
-	width:100%;
+	/*width:100%;*/
 }
 
 /*=========================TERMINA RESULT======================*/
 
 /*=========================EMPIEZA ALBUMS======================*/
 
+.busquedaTop{
+	width:30%;
+}
+
+
+
 .albumHeader{
-	background: url("/logo.jpg")no-repeat;
-	background-size: 85px 85px;
+	/*background: url("/logo.jpg")no-repeat;
+	background-size: 85px 85px;*/
 	overflow: auto;
 	height: 100px;
 	display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+}
+
+#redirectWithSearch {
+	width: 80px !important;
+	height: 80px !important;
+	min-height: 80px !important;
+	min-width: 80px !important;
 }
 
 .headerSearchbar{
 	
-	width:40%;
+	width:70%;
 	height: 20%;
 	border-radius: 500px;
+	/*justify-content: flex-end;*/
 }
 
 
@@ -160,3 +180,19 @@ b{
 }
 
 /*=========================TERMINA ALBUMS======================*/
+/*=========================EMPIEZA DETALLE======================*/
+#fotoDetalle{
+	width:200px;
+	height: 200px;
+}
+
+#nombreAlbum{
+	font-size:40px;
+	text-align: center;
+}
+
+
+#estrella:hover{
+	cursor:pointer;
+}
+/*=========================TERMINA DETALLE======================*/

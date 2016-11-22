@@ -1,19 +1,30 @@
 <div>
-    <header class="albumHeader"><input class="headerSearchbar" placeholder="Search for a new artist" type="text" >
-    <button class="boton" ng-click="searchArtist()">Buscar</button></header>
+    <header class="albumHeader">
+        <img src="../logo.jpg" id="redirectWithSearch" ng-click="home()">
+         <div class="busquedaTop">
+            <input class="headerSearchbar" placeholder="Search for a new artist" type="text" ng-model="home_search" >
+            <button class="boton" ng-click="searchArtist()">Buscar</button> 
+        </div>
+    </header>
     <div class="contentContainer">
     <div class="parteSuperior">
-        <img src={{album.images[0].url}}  alt="">
-        <b>{{album.name}}</b>
+        <img src={{album.images[0].url}}  alt="" id="fotoDetalle">
+        <b id="nombreAlbum">{{album.name}}</b>
     </div>
         <ul>
             <li class="simple" ng-repeat="track in tracks">
                 <div class="caja_li">
-                <b>{{track.name}}</b>
-                <i ng-class="{'fa fa-star-o':!seeFavs(track.id) , 'fa fa-star':seeFavs(track.id)}" aria-hidden="true" ng-click="starColor(track)"></i>
- 
+                    <b>{{track.name}}</b>
+                    <div>
+                        <audio ng-src="{{track.preview_url}}" controls=""></audio>
+                        <i ng-class="{'fa fa-star-o':!seeFavs(track.id) , 'fa fa-star':seeFavs(track.id)}" aria-hidden="true" ng-click="starColor(track)" id="estrella"></i>
+                    </div>
                 </div>                      
             </li>
         </ul>
     </div>
 </div>
+
+
+
+                    
