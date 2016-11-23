@@ -53,6 +53,7 @@ export function ApiService($http, $localStorage) {
 			method: 'GET',
 			url:"https://api.spotify.com/v1/albums/"+id
 		}).then((response)=>{
+			this.getAlbumId=response.data;
 			return response.data;
 		},()=>{
 			console.log("La llamada fallo 5");
@@ -81,8 +82,17 @@ export function ApiService($http, $localStorage) {
 			console.log('La llamada falló 4');
 		})
 	}
+
+	var Element=function(image,artistName,trackName,albumName,id){
+		this.image=image;
+		this.artistName=artistName;
+		this.trackName=trackName;
+		this.albumName=albumName;
+		this.id=id;
+	}
 	
 	this.changeStar=(item)=>{
+
 		var flag=false;
 		for (var i = $localStorage.favs.length - 1; i >= 0; i--) {
 			if($localStorage.favs[i].id == item.id){
@@ -91,11 +101,16 @@ export function ApiService($http, $localStorage) {
 			}
 		}
 		if(flag==false){
-			$localStorage.favs.push(item);
+			var album=this.getAlbumId;
+			var element= new Element(album.images[0].url,album.name,item.name, item.artists[0].name, item.id );
+
+			$localStorage.favs.push(element);
 		}
+		console.log($localStorage.favs);
 	}
 
 	this.isFav=(id)=>{
+		$localStorage.favs = $localStorage.favs || [];
 		for(var i=$localStorage.favs.length -1; i>=0;i--){
 			if($localStorage.favs[i].id== id){
 				return true;
@@ -103,5 +118,9 @@ export function ApiService($http, $localStorage) {
 		}
 		return false;
 	}
-
+function favorito(track,album){
+	this.nombre = track.name;
+	this.url = album.images[0].url;
+	this.banda= album.artists[0].name;
+}
 }

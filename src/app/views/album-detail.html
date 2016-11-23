@@ -11,8 +11,10 @@
         <img src={{album.images[0].url}}  alt="" id="fotoDetalle">
         <b id="nombreAlbum">{{album.name}}</b>
     </div>
+    <button class="boton" ng-click="orderByLength()">Ordenar por longitud</button>
+    <button class="boton" ng-click="orderOriginal()">Orden original</button>
         <ul>
-            <li class="simple" ng-repeat="track in tracks">
+            <li class="simple" ng-repeat="track in tracks | orderBy: order">
                 <div class="caja_li">
                     <b>{{track.name}}</b>
                     <div>

@@ -16,9 +16,12 @@
 	  <ul>
 	  	<li class="doble" ng-repeat="fav in favs">
 	  		 <div class="caja_li">
-	  		 		<img ng-src="{{fav.images[0].url}}">
-	  		 		<!-- <b>{{artists.name}}</b> -->
-	  				<b>{{fav.name}}</b>              
+	  		 		<img ng-src="{{fav.image}}">
+	  				<div id="dataFavs">
+	  				<p>{{fav.albumName}}</p>  
+	  				<p>{{fav.artistName}}</p>         
+	  				<p>{{fav.trackName}}</p>  
+	  				</div>      
              </div>
 	  	</li>
 	  </ul>

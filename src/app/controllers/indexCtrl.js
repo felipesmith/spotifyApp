@@ -8,7 +8,4 @@ export function Controller($scope,$http, $location,$localStorage, ApiService){
 	$scope.favs=$localStorage.favs;
 	console.log($localStorage.favs);
 
-
-
-
 }

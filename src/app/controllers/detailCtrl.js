@@ -2,6 +2,7 @@ export function DController($scope,$http, $routeParams, $location, ApiService){
 	
 	$scope.albumId = $routeParams.albumId;
 	console.log($scope.albumId);
+	$scope.order='track_number';
 	
 
 	ApiService.searchSongsService($routeParams.albumId)
@@ -35,5 +36,13 @@ $scope.searchArtist = function(){
 
 	$scope.home=function(){
 		$location.path('/');
+	}
+
+	$scope.orderByLength=function(){
+		$scope.order='duration_ms';
+	}
+
+	$scope.orderOriginal=function(){
+		$scope.order='track_number';
 	}
 }

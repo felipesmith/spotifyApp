@@ -74,6 +74,10 @@ footer{
  	width: 100%;
  	display:inline-block;
 }
+#dataFavs{
+	font-size:10px;
+	line-height: 20px;
+}
 
 button{
 	border-radius: 500px;
