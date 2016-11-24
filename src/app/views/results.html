@@ -14,12 +14,7 @@
 		<ul>
 		  	<li class="doble" ng-repeat="artist in artists">
 		  		
-		  		<div class="caja_li">
-
-		  		<img ng-if="artist.images.length>0" src={{artist.images[0].url}} ng-click="showAlbums(artist.id)">
-		  		<img ng-if="artist.images.length==0" src=/default.jpg ng-click="showAlbums(artist.id)">
-		  		<b>{{artist.name}}</b>
-		  	    
+		  		<elemento src="artist.images[0].url" action="showAlbums(artist.id)" text="artist.name"> </elemento>
 		  		</div>
 		  	</li>
 	  	</ul>

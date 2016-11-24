@@ -15,7 +15,7 @@
     <button class="boton" ng-click="orderOriginal()">Orden original</button>
         <ul>
             <li class="simple" ng-repeat="track in tracks | orderBy: order">
-                <div class="caja_li">
+                <div class="caja_li_dos">
                     <b>{{track.name}}</b>
                     <div>
                         <audio ng-src="{{track.preview_url}}" controls=""></audio>

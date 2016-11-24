@@ -66,6 +66,14 @@ export function ApiService($http, $localStorage) {
 			method: 'GET',
 			url: "https://api.spotify.com/v1/search?q="+name+"&type=artist" 
 		}).then((response)=>{
+		
+			 response.data.artists.items.forEach(function(element){
+				if(element.images.length==0){
+					console.log("hola");
+					element.images.push({url: '/default.jpg'});
+				}
+			})
+	
 			return response.data.artists.items;
 		},()=>{
 			console.log('La llamada falló');

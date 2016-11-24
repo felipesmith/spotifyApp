@@ -114,7 +114,7 @@ ul {
 }
 
 li{
-	min-width: 185px;
+	min-width: 285px;
 
 }
 
@@ -132,13 +132,19 @@ li{
 
 }
 
+.caja_li_dos{
+	display: flex;
+    justify-content: space-between;
+}
+
+
 .caja_li{
 	
 	display:flex;
 	/*border-top:1px solid black;*/
 	border-bottom: 1px solid black;
 	line-height: 2;
-	justify-content: space-between;
+	/*justify-content: space-between;*/
 
 	/*flex-direction: row;*/
 }
@@ -204,4 +210,6 @@ b{
 #estrella:hover{
 	cursor:pointer;
 }
+
+
 /*=========================TERMINA DETALLE======================*/
